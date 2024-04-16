@@ -1,0 +1,12 @@
+metrics:
+  - ${metrics_dir}/${model_name}/evaluation_report.json
+plots:
+  - Loss_functions:
+      template: simple
+      x: epoch
+      y:
+        ${metrics_dir}/${model_name}/train_loss.csv: loss
+        ${metrics_dir}/${model_name}/eval_loss.csv: loss
+      title: Training/Validation Loss
+      x_label: Epoch
+      y_label: Loss
